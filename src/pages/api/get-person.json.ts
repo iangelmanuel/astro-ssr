@@ -1,7 +1,5 @@
 import type { APIRoute } from "astro"
 
-export const prerender = false
-
 export const GET: APIRoute = async () => {
   const person = {
     name: "Angel De La Torre",
