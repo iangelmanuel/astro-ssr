@@ -1,7 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content"
 import BlogPost from "../../layouts/BlogPost.astro"
-import LikeCounter from "@/components/likes/LikeCounter.vue"
+// import LikeCounter from "@/components/likes/LikeCounter.vue"
+import LikeCounterActions from "@/components/likes/LikeCounterActions.vue"
 
 export const prerender = true
 
@@ -20,10 +21,14 @@ const { Content } = await post.render()
 
 <BlogPost {...post.data}>
   <div style={{ height: "50px" }}>
-    <LikeCounter
+    <LikeCounterActions
       postId={post.id}
       client:only="vue"
     />
+    <!-- <LikeCounter
+      postId={post.id}
+      client:only="vue"
+    /> -->
   </div>
 
   <Content />
