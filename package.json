@@ -4,6 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "dev:remote": "astro dev --remote",
+    "seed:remote": "astro db execute db/sed.ts --remote",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -12,6 +14,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.0",
     "@astrojs/cloudflare": "^11.0.1",
+    "@astrojs/db": "^0.12.0",
     "@astrojs/mdx": "^3.1.3",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
